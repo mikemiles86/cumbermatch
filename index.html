@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Benedict Cumbermatch!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="js/jquery.md5.js"></script>
+    <script src="js/cumbermatch.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Benedict Cumber-match!</h1>
+    <div ng-app="cumberapp">
+        <div id="container" ng-controller="GameController">
+            <div id="left-column">
+                <section class="card-container">
+                    <div id="card">
+                        <figure class="front">?</figure>
+                        <figure class="back" style="background-image:url('{{gameData.challenge.image.url}}');">
+                            <span class="response hide">{{gameData.answerResponse}}!</span>
+                        </figure>
+                    </div>
+                </section>
+                <section class="score-box hide">
+                    <span class="title">Score:</span>
+                    <span class="score">{{gameData.score}} / {{gameData.challenges}}</span>
+                </section>
+            </div>
+            <div id="right-column">
+                <section class="answer hide">
+                    <span class="status">{{gameData.answerStatus}}</span>
+                    <br />
+                    <p class="explain">
+                        That was Benedict Cumberbatch as<br />
+                        <span class="role">{{gameData.answer.role}}</span><br />
+                            in<br />
+                        <span class="title">{{gameData.answer.title}}</span>
+                        <br /><br />
+                        <span class="source"><a href="{{gameData.answer.source}}" target="_blank">Image Source</a></span>
+                    </p>
+                </section>
+                <section class="actions">
+                    <div id="options">
+                        <button class="btn" ng-repeat="option in gameData.challenge.options" ng-click="gameData.guessImage(option.id)">{{option.title}}</button>
+                    </div>
+                    <div id="controls">
+                        <div id="start">
+                            <div class="answer">
+                                How well do you know Benedict Cumberbatch?<br />
+                                Test your skills and see if you can (cumber-)match the movie from the picture.<br />
+                                Or perhaps it is just Benedict being a Comberbatch.<br />
+                                <br />
+                                Good Luck.
+                            </div>
+                            <button class="btn" ng-click="gameData.startGame()">Start Game</button>
+                        </div>
+                        <button class="hide btn" id="flip" ng-click="gameData.playGame()">Flip</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
