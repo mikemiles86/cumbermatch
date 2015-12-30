@@ -25,6 +25,7 @@ h1 {
 .card-container {
   height: 90%;
   min-height: 400px;
+  min-width:200px;
   -webkit-perspective: 400px;
    -moz-perspective: 400px;
      -o-perspective: 400px;
@@ -35,6 +36,7 @@ h1 {
   display: inline-block;
   width: 100%;
   min-width: 400px;
+
   height: 100%;
   position: absolute;
   -webkit-transition: -webkit-transform 1s;

@@ -32,11 +32,11 @@
                     <br />
                     <p class="explain">
                         That was Benedict Cumberbatch as<br />
-                        <span class="role">{{gameData.answer.role}}</span><br />
+                        <a class="role" href="{{gameData.answer.role.url}}" target="_blank">{{gameData.answer.role.name}}</a><br />
                             in<br />
-                        <span class="title">{{gameData.answer.title}}</span>
+                        <a class="title" href="{{gameData.answer.title.url}}">{{gameData.answer.title.name}}</a>
                         <br /><br />
-                        <span class="source"><a href="{{gameData.answer.source}}" target="_blank">Image Source</a></span>
+                        <span class="source"> Image Source: <a href="{{gameData.answer.source.url}}" target="_blank">{{gameData.answer.source.title}}</a></span>
                     </p>
                 </section>
                 <section class="actions">
