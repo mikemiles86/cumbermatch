@@ -33,13 +33,13 @@ angular.module("cumberapp", [])
             if (hash == $scope.gameData.challenge.answer.id) {
                 $('.answer').addClass('correct');
                 $scope.gameData.answerStatus = "Correct";
-                $scope.gameData.challenge.image.url = "images/happy.jpg";
+                $scope.gameData.challenge.image.url = "/cumbermatch/images/happy.jpg";
                 $scope.gameData.score++;
                 $scope.gameData.answerResponse = $scope.gameData.challenge.answer.correct;
             }
             else {
                 $('.answer').addClass('incorrect');
-                $scope.gameData.challenge.image.url = "images/angry.jpg";
+                $scope.gameData.challenge.image.url = "/cumbermatch/images/angry.jpg";
                 $scope.gameData.answerStatus = "Wrong";
                 $scope.gameData.answerResponse = $scope.gameData.challenge.answer.incorrect;
             }
