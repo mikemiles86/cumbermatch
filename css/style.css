@@ -1,5 +1,5 @@
 body {
-  background-image: url('/images/paisley.png');
+  background-image: url('images/paisley.png');
   color: #fff;
 }
 
@@ -76,7 +76,7 @@ h1 {
 }
 
 #card .front {
-  background-image: url("/images/playing_card.png");
+  background-image: url("images/playing_card.png");
 }
 
 #card .back {
