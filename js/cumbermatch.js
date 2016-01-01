@@ -9,6 +9,7 @@ angular.module("cumberapp", [])
                 $('#start').remove();
                 $('#controls').addClass('hide');
                 $('#options').addClass('hide');
+                $('.card-container').removeClass('hide');
                 $('#flip').removeClass('hide');
                 $('.score-box').removeClass('hide');
                 $scope.gameData.loadNextChallenge();

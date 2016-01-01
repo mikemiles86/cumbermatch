@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <title>Benedict Cumbermatch!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="js/jquery.md5.js"></script>
     <script src="js/cumbermatch.js"></script>
+    <link rel="stylesheet" href="css/structure.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,7 +15,7 @@
     <div ng-app="cumberapp">
         <div id="container" ng-controller="GameController">
             <div id="left-column">
-                <section class="card-container">
+                <section class="card-container hide">
                     <div id="card">
                         <figure class="front">?</figure>
                         <figure class="back" style="background-image:url('{{gameData.challenge.image.url}}');">
@@ -34,7 +36,7 @@
                         That was Benedict Cumberbatch as<br />
                         <a class="role" href="{{gameData.answer.role.url}}" target="_blank">{{gameData.answer.role.name}}</a><br />
                             in<br />
-                        <a class="title" href="{{gameData.answer.title.url}}">{{gameData.answer.title.name}}</a>
+                        <a class="title" href="{{gameData.answer.title.url}}" target="_blank">{{gameData.answer.title.name}}</a>
                         <br /><br />
                         <span class="source"> Image Source: <a href="{{gameData.answer.source.url}}" target="_blank">{{gameData.answer.source.title}}</a></span>
                     </p>
@@ -48,7 +50,7 @@
                             <div class="answer">
                                 How well do you know Benedict Cumberbatch?<br />
                                 Test your skills and see if you can (cumber-)match the movie from the picture.<br />
-                                Or perhaps it is just Benedict being a Comberbatch.<br />
+                                Or perhaps it is just Benedict being himself.<br />
                                 <br />
                                 Good Luck.
                             </div>
