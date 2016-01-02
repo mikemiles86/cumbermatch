@@ -5,6 +5,11 @@ body {
   line-height: 2rem;
 }
 
+h1 {
+  font-size: .75em;
+  line-height: .75em;
+}
+
 body {
   background-image: url('/images/paisley.png');
 }
@@ -21,7 +26,7 @@ body {
 }
 
 #card .back .response {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 800;
   text-shadow: 3px 4px 5px #000;
   -webkit-transform: rotate(350deg);
@@ -77,4 +82,13 @@ body {
   background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
+}
+
+@media (min-width: 40em) {
+  h1 {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    margin: 2%;
+  }
+  #card .back .response { font-size: 4rem;}
 }

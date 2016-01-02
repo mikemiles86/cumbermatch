@@ -17,6 +17,7 @@ angular.module("cumberapp", [])
 
         $scope.gameData.playGame = function() {
             $('#controls').addClass('hide');
+            $('#card .front .btn').addClass('hide');
             $('#options').removeClass('hide');
             $('#card').addClass('flipped');
             $('.answer').removeClass('correct');
@@ -67,6 +68,7 @@ angular.module("cumberapp", [])
             }).then(function successCallback(response) {
                 $scope.gameData.challenge = response.data;
                 $('#controls').removeClass('hide');
+                $('#card .front .btn').removeClass('hide');
             }, function errorCallback(response) {
                 // do nothing.
             });

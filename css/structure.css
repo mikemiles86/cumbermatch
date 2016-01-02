@@ -1,50 +1,47 @@
 html, body {
-  display: block;
   padding: 0;
   margin: 0;
 }
 
 h1 {
-  display: block;
-  padding: 1%;
-  margin: 0 5px 0 5px;
+  margin: 0;
+  margin-top: 1%;
+  padding: 0;
   width: 100%;
   text-align: center;
 }
 
 #container {
-  height: 100%;
-  min-height: 800px;
-  width: 100%;
-  min-width: 400px;
+  width: 100vw;
   margin: 0;
-  margin-top:2%;
+  margin-top:1%;
   padding: 0;
-
 }
 
 #left-column {
   display: inline-block;
-
   width: 100%;
-  min-width: 400px;
-  min-height: 350px;
   margin: auto;
 }
 
 #right-column {
   display: inline-block;
-
   width: 100%;
-  min-width: 400px;
-  min-height: 350px;
   margin: auto;
+}
+
+#social {
+  clear: both;
+  display: block;
+  width: 100vw;
+  margin: auto;
+  padding: auto;
+  text-align: center;
 }
 
 .card-container {
   margin: auto;
-  width: 400px;
-  height: 350px;
+  height: 45vh;
   -webkit-perspective: 400px;
   -moz-perspective: 400px;
     -o-perspective: 400px;
@@ -85,6 +82,11 @@ h1 {
      -moz-backface-visibility: hidden;
        -o-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+
+#card .front {
+  padding: auto;
+  display: inline-flex;
 }
 
 #card .back {
@@ -145,11 +147,23 @@ h1 {
   padding: 1% 0 1% 0;
 }
 
+#card .front .btn {
+  width: 50%;
+  margin: auto;
+}
+
 .hide {
   display: none !important;
 }
 
 @media (min-width: 40em) {
+  #container {
+    width: 100%;
+    min-width: 800px;
+    padding: auto;
+    margin: auto;
+    display: inline;
+  }
   #left-column, #right-column {
     width: 50%;
   }
