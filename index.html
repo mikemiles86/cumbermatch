@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Benedict Cumber-match!</h1>
+    <h1>Benedict Cumbermatch!</h1>
     <div ng-app="cumberapp">
         <div id="container" ng-controller="GameController">
-            <div id="left-column">
-                <section class="card-container hide">
+            <div id="left-column" class="hide">
+                <section class="card-container">
                     <div id="card">
                         <figure class="front">?</figure>
                         <figure class="back" style="background-image:url('{{gameData.challenge.image.url}}');">
@@ -37,7 +37,7 @@
                         <a class="role" href="{{gameData.answer.role.url}}" target="_blank">{{gameData.answer.role.name}}</a><br />
                             in<br />
                         <a class="title" href="{{gameData.answer.title.url}}" target="_blank">{{gameData.answer.title.name}}</a>
-                        <br /><br />
+                        <br />
                         <span class="source"> Image Source: <a href="{{gameData.answer.source.url}}" target="_blank">{{gameData.answer.source.title}}</a></span>
                     </p>
                 </section>
