@@ -2,20 +2,25 @@
 <html lang="en">
 <head>
     <title>Benedict Cumbermatch!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How well can you (Cumber-)match the pictures of Benedict Cumberbatch with his acting roles?" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "2bdd6da6-0d96-46b7-a2b6-be11fea5c91d", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
     <script src="js/jquery.md5.js"></script>
     <script src="js/cumbermatch.js"></script>
+    <link rel="stylesheet" href="css/structure.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Benedict Cumber-match!</h1>
+    <h1>Benedict Cumbermatch!</h1>
     <div ng-app="cumberapp">
         <div id="container" ng-controller="GameController">
-            <div id="left-column">
+            <div id="left-column" class="hide">
                 <section class="card-container">
                     <div id="card">
-                        <figure class="front">?</figure>
+                        <figure class="front"><button class="hide btn" id="flip" ng-click="gameData.playGame()">Flip</button></figure>
                         <figure class="back" style="background-image:url('{{gameData.challenge.image.url}}');">
                             <span class="response hide">{{gameData.answerResponse}}!</span>
                         </figure>
@@ -23,19 +28,16 @@
                 </section>
                 <section class="score-box hide">
                     <span class="title">Score:</span>
-                    <span class="score">{{gameData.score}} / {{gameData.challenges}}</span>
+                    <span class="score">{{gameData.score}} / {{gameData.rounds}}</span>
                 </section>
             </div>
             <div id="right-column">
                 <section class="answer hide">
                     <span class="status">{{gameData.answerStatus}}</span>
-                    <br />
                     <p class="explain">
                         That was Benedict Cumberbatch as<br />
-                        <a class="role" href="{{gameData.answer.role.url}}" target="_blank">{{gameData.answer.role.name}}</a><br />
-                            in<br />
-                        <a class="title" href="{{gameData.answer.title.url}}">{{gameData.answer.title.name}}</a>
-                        <br /><br />
+                        <a class="role" href="{{gameData.answer.role.url}}" target="_blank">{{gameData.answer.role.name}}</a> in <a class="title" href="{{gameData.answer.title.url}}" target="_blank">{{gameData.answer.title.name}}</a>
+                        <br />
                         <span class="source"> Image Source: <a href="{{gameData.answer.source.url}}" target="_blank">{{gameData.answer.source.title}}</a></span>
                     </p>
                 </section>
@@ -46,19 +48,20 @@
                     <div id="controls">
                         <div id="start">
                             <div class="answer">
-                                How well do you know Benedict Cumberbatch?<br />
-                                Test your skills and see if you can (cumber-)match the movie from the picture.<br />
-                                Or perhaps it is just Benedict being a Comberbatch.<br />
-                                <br />
-                                Good Luck.
+                                How well can you match the pictures of Benedict Cumberbatch with his acting roles?<br />
+                                Test your skills and see how well you can do.<br />
                             </div>
                             <button class="btn" ng-click="gameData.startGame()">Start Game</button>
                         </div>
-                        <button class="hide btn" id="flip" ng-click="gameData.playGame()">Flip</button>
+
                     </div>
                 </section>
             </div>
         </div>
+    </div>
+    <div id="social">
+        <span class='st_facebook_hcount' displayText='Facebook'></span>
+        <span class='st_twitter_hcount' displayText='Tweet'></span>
     </div>
 </body>
 </html>
